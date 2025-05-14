@@ -22,7 +22,7 @@ if (!$resultado) {
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>📚 Librería Virtuaal</title>
+    <title>📚 Librería Virtual</title>
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/29/29302.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../style/style.css">
@@ -40,7 +40,6 @@ if (!$resultado) {
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link text-white" href="index.php">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="Historial.php">Historial de ventas</a></li>
-                   
                 </ul>
             </div>
         </nav>
@@ -62,7 +61,7 @@ if (!$resultado) {
 </div>
 
 <div class="container py-5">
-    <div class="d-flex justify-content-between align-items-center mb-3">
+    <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-3">
         <h1>📚 Librería Virtual</h1>
 
         <form method="GET" action="index.php" class="d-flex mb-4">
@@ -70,11 +69,12 @@ if (!$resultado) {
             <button class="btn btn-outline-success" type="submit">Buscar</button>
         </form>
 
-        <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">
-            Ver carrito 🛒
+        <div>
+            <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">
+                Ver carrito 🛒
+            </button>
             <button id="vaciar-carrito-btn" class="btn btn-danger mt-2">Vaciar carrito</button>
-
-        </button>
+        </div>
     </div>
 
     <div class="row" id="book-list">
@@ -116,7 +116,6 @@ if (!$resultado) {
         <div class="offcanvas-header">
             <h5 class="offcanvas-title">🛒 Carrito de compras</h5>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
-            
         </div>
         <div class="offcanvas-body">
             <ul class="list-group mb-2" id="cart-list"></ul>
@@ -134,6 +133,8 @@ if (!$resultado) {
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../js/libro.js"></script>
+
+
 
 </body>
 </html>
